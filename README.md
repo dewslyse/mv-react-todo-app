@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Todo Application
+# Todo Application with React
 
 > This is a simple Todo application built with ReactJS. Todo items can be added via the input form, marked as completed and also deleted.
 
@@ -21,10 +21,10 @@
 To get a local copy up and running follow this simple step:
 
 - Clone repository to your local machine: 
-`git@github.com:dewslyse/math-magicians.git`
+`git@github.com:dewslyse/mv-react-todo-app.git`
 This will create a directory in the name of the project folder.
 
-- `cd math-magicians`
+- `cd mv-react-todo-app`
 - Run `npm install` to install dependencies
 - Run `npm start` to start app
 You should see the app in your browser address bar at `http://localhost:3000`
