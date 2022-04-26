@@ -1,8 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-indent */
-/* eslint-disable indent */
-/* eslint-disable react/no-unused-state */
-
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 

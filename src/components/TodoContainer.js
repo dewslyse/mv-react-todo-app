@@ -1,8 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/jsx-indent */
-/* eslint-disable indent */
-/* eslint-disable react/no-unused-state */
-
 import React, { PureComponent } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import TodoList from './TodosList';
