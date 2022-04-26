@@ -3,16 +3,24 @@ import PropTypes from 'prop-types';
 
 class TodoItem extends PureComponent {
   render() {
-    const { todo } = this.props;
+    const { todo, handleChangeProps } = this.props;
 
     return (
-      <li>{todo.title}</li>
+      <li>
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => handleChangeProps(todo.id)}
+        />
+        {todo.title}
+      </li>
     );
   }
 }
 
 TodoItem.propTypes = {
   todo: PropTypes.instanceOf(Object).isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
 };
 
 export default TodoItem;

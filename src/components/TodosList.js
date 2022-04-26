@@ -9,11 +9,15 @@ import TodoItem from './TodoItem';
 
 class TodoList extends PureComponent {
   render() {
-    const { todos } = this.props;
+    const { todos, handleChangeProps } = this.props;
     return (
       <ul>
         {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            handleChangeProps={handleChangeProps}
+          />
         ))}
       </ul>
     );
@@ -22,6 +26,7 @@ class TodoList extends PureComponent {
 
 TodoList.propTypes = {
   todos: PropTypes.instanceOf(Array).isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
 };
 
 export default TodoList;
