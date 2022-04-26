@@ -46,12 +46,25 @@ class TodoContainer extends PureComponent {
     }));
   };
 
+  delTodo = (id) => {
+    const { todos } = this.state;
+    this.setState({
+      todos: [
+        ...todos.filter((todo) => (todo.id !== id)),
+      ],
+    });
+  }
+
   render() {
     const { todos } = this.state;
     return (
       <div>
         <Header />
-        <TodoList todos={todos} handleChangeProps={this.handleChange} />
+        <TodoList
+          todos={todos}
+          handleChangeProps={this.handleChange}
+          deleteTodoProps={this.delTodo}
+        />
       </div>
     );
   }
