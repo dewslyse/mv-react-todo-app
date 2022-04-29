@@ -33,7 +33,13 @@ class TodoItem extends PureComponent {
 }
 
 TodoItem.propTypes = {
-  todo: PropTypes.instanceOf(Object).isRequired,
+  todo: PropTypes.shape(
+    {
+      id: PropTypes.string,
+      title: PropTypes.string,
+      completed: PropTypes.bool,
+    },
+  ).isRequired,
   handleChangeProps: PropTypes.func.isRequired,
   deleteTodoProps: PropTypes.func.isRequired,
 };

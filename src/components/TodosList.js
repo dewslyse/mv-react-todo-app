@@ -21,7 +21,15 @@ class TodoList extends PureComponent {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.instanceOf(Array).isRequired,
+  todos: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        id: PropTypes.string,
+        title: PropTypes.string,
+        completed: PropTypes.bool,
+      },
+    ),
+  ).isRequired,
   handleChangeProps: PropTypes.func.isRequired,
   deleteTodoProps: PropTypes.func.isRequired,
 };
