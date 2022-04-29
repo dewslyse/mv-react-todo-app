@@ -19,14 +19,16 @@ class InputTodo extends PureComponent {
   handleSubmit = (e) => {
     const { title } = this.state;
     const { addTodoProps } = this.props;
+    const error = document.querySelector('.error');
     e.preventDefault();
     if (title.trim()) {
       addTodoProps(title);
       this.setState({
         title: '',
       });
+      error.textContent = '';
     } else {
-      alert('Input field cannot be empty');
+      error.textContent = 'Input field cannot be empty';
     }
   };
 
@@ -34,17 +36,20 @@ class InputTodo extends PureComponent {
     const { title } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit} className="form-container">
-        <input
-          className="input-text"
-          type="text"
-          placeholder="Add Todo..."
-          value={title}
-          name="title"
-          onChange={this.onChange}
-        />
-        <button className="input-submit" type="button">Submit</button>
-      </form>
+      <>
+        <form onSubmit={this.handleSubmit} className="form-container">
+          <input
+            className="input-text"
+            type="text"
+            placeholder="Add Todo..."
+            value={title}
+            name="title"
+            onChange={this.onChange}
+          />
+          <button className="input-submit" type="button">Submit</button>
+        </form>
+        <p className="error" />
+      </>
     );
   }
 }
