@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
+  color: #444;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 100%;
+  padding: 8rem 10px 4rem;
+}
+
+.form-container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 50px;
+  box-shadow: 0 1px 6px 0 rgba($color: #000, $alpha: 0.38);
+  justify-content: space-evenly;
+}
+
+.input-text {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 85%;
+  padding: 0 5px 0 10px;
+  border-radius: 50px;
+
+  &::placeholder {
+    color: #000;
+  }
+}
+
+.input-submit {
+  background: transparent;
+  color: #5b5b5b;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.input-text,
+.input-submit {
+  height: 45px;
+  border: none;
+  outline: none;
+}
+
+.header {
+  padding: 20px 0;
+  line-height: 1.5em;
+}
+
+.todo-caption {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #ececec;
+  margin-bottom: 2rem;
+  line-height: 1em;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-weight: 500;
+}
