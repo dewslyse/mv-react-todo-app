@@ -64,6 +64,18 @@ class TodoContainer extends PureComponent {
     });
   };
 
+  setUpdate = (updatedTitle, id) => {
+    const { todos } = this.state;
+    this.setState({
+      todos: todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, title: updatedTitle };
+        }
+        return todo;
+      }),
+    });
+  }
+
   render() {
     const { todos } = this.state;
     return (
@@ -75,6 +87,7 @@ class TodoContainer extends PureComponent {
             todos={todos}
             handleChangeProps={this.handleChange}
             deleteTodoProps={this.delTodo}
+            setUpdate={this.setUpdate}
           />
         </div>
       </div>
